@@ -1,0 +1,6 @@
+store_id,sku_store_days,stockout_days,units_sold,stockout_rate_pct
+ST05,7200,134,22003,1.86
+ST03,7200,125,19908,1.74
+ST02,7200,97,17190,1.35
+ST01,7200,85,13949,1.18
+ST04,7200,67,15754,0.93

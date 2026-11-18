@@ -1,0 +1,6 @@
+category,units_sold,cogs_usd,avg_inventory_value_usd,turnover_period,turnover_annualised,days_of_supply,stockout_rate_pct
+Accessories,33350,846257.05,202878.68,4.17,8.46,41.9,0.89
+Audio,17120,1839333.57,465001.32,3.96,8.02,47.3,0.28
+Laptops,13438,9462642.02,2393151.08,3.95,8.02,45.6,1.9
+TVs,9588,5242205.02,1380205.84,3.8,7.7,47.8,2.81
+Appliances,15308,4205268.98,1137839.26,3.7,7.49,49.1,1.42

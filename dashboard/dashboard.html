@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Inventory &amp; Supply Chain Analytics — Dashboard</title>
+<style>
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#f6f8fb;color:#1c2733}
+header{background:linear-gradient(120deg,#2F6B3A,#C05A2E);color:#fff;padding:28px 20px;text-align:center}
+header h1{margin:0 0 4px;font-size:26px}header p{margin:2px 0;opacity:.92;font-size:14px}
+main{max-width:1060px;margin:0 auto;padding:22px 16px 50px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:16px 0}
+.kpi{background:#fff;border-radius:10px;padding:14px;text-align:center;box-shadow:0 2px 8px rgba(47,107,58,.08)}
+.kpi b{display:block;font-size:21px;color:#B03A2E}.kpi.blue b{color:#2F6B3A}.kpi.teal b{color:#606C38}
+.kpi small{color:#5b6b7c}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:16px}
+.card{background:#fff;border-radius:12px;padding:16px;box-shadow:0 2px 10px rgba(47,107,58,.08)}
+.card h3{margin-top:0;color:#2F6B3A}.card img{width:100%;border-radius:8px;border:1px solid #e3ebf2}
+table{width:100%;border-collapse:collapse;background:#fff;font-size:14px}
+th,td{padding:8px 10px;border-bottom:1px solid #e3ebf2;text-align:left}th{color:#2F6B3A}
+.note{color:#5b6b7c;font-size:13px}h2{color:#2F6B3A}
+</style></head><body>
+<header><h1>📦 Inventory &amp; Supply Chain Analytics — Stock Control Center</h1>
+<p>Portfolio project · Synthetic data only · 40 SKUs × 5 stores × 180 days · 8 suppliers</p></header>
+<main>
+<div class="kpis">
+<div class="kpi blue"><b>36,000</b><small>SKU-Store-Days Analysed</small></div>
+<div class="kpi blue"><b>98.59%</b><small>In-Stock Rate (508 stock-out days)</small></div>
+<div class="kpi"><b>$1,086,953</b><small>Est. Lost Sales from Empty Shelves</small></div>
+<div class="kpi teal"><b>7.85x</b><small>Inventory Turnover (annualised)</small></div>
+<div class="kpi teal"><b>45.4 days</b><small>Average Days of Supply</small></div>
+<div class="kpi blue"><b>$5,579,076</b><small>Average Inventory Value</small></div>
+<div class="kpi"><b>71.94%</b><small>Supplier On-Time Delivery (360 POs)</small></div>
+<div class="kpi"><b>$1,593,826</b><small>Excess Inventory (&gt;60 days of supply)</small></div>
+</div>
+
+<h2>Where the shelves go empty</h2>
+<div class="grid">
+<section class="card"><h3>Stock-out rate by month</h3><img src="../images/monthly_stockout_trend.png" alt="Monthly stock-out trend"></section>
+<section class="card"><h3>Stock-out rate by store</h3><img src="../images/stockout_rate_by_store.png" alt="Stock-out rate by store"></section>
+<section class="card"><h3>Inventory turnover by category</h3><img src="../images/turnover_by_category.png" alt="Turnover by category"></section>
+<section class="card"><h3>Excess inventory by category</h3><img src="../images/excess_inventory_by_category.png" alt="Excess inventory by category"></section>
+</div>
+
+<h2>Supplier scorecard — promised vs actual</h2>
+<div class="grid">
+<section class="card"><h3>On-time delivery %</h3><img src="../images/supplier_on_time.png" alt="Supplier on-time delivery"></section>
+<section class="card"><h3>Lead time: promised vs actual</h3><img src="../images/lead_time_promised_vs_actual.png" alt="Lead time promised vs actual"></section>
+</div>
+<table><tr><th>Supplier</th><th>Orders</th><th>Promised (days)</th><th>Actual (days)</th><th>On-time</th><th>Late orders</th><th>Avg days late</th><th>Qty fill</th></tr>
+<tr><td>BudgetParts Wholesale (SUP08)</td><td>29</td><td>10.34</td><td>13.34</td><td>48.28%</td><td>15</td><td>5.80</td><td>95.79%</td></tr>
+<tr><td>ValueLine Supply Co (SUP03)</td><td>28</td><td>8.36</td><td>9.86</td><td>50.00%</td><td>14</td><td>3.00</td><td>99.20%</td></tr>
+<tr><td>GlobalTech Imports (SUP05)</td><td>73</td><td>13.38</td><td>15.56</td><td>63.01%</td><td>27</td><td>5.89</td><td>97.60%</td></tr>
+<tr><td>EverReady Supply (SUP07)</td><td>29</td><td>9.69</td><td>10.28</td><td>75.86%</td><td>7</td><td>2.43</td><td>100.00%</td></tr>
+<tr><td>Metro Wholesale Group (SUP06)</td><td>61</td><td>7.26</td><td>7.79</td><td>77.05%</td><td>14</td><td>2.29</td><td>100.00%</td></tr>
+<tr><td>NorthPeak Distribution (SUP01)</td><td>68</td><td>5.97</td><td>6.13</td><td>80.88%</td><td>13</td><td>1.46</td><td>100.00%</td></tr>
+<tr><td>QuickShip Logistics (SUP04)</td><td>39</td><td>5.23</td><td>5.36</td><td>84.62%</td><td>6</td><td>1.17</td><td>100.00%</td></tr>
+<tr><td>PrimeSource Wholesale (SUP02)</td><td>33</td><td>7.06</td><td>7.39</td><td>84.85%</td><td>5</td><td>2.20</td><td>100.00%</td></tr></table>
+<p class="note">Reading this table is the real analyst skill: the cheapest suppliers are the most expensive ones. BudgetParts is late on half its orders and ships short (95.79% fill) — every late delivery on a fast-selling SKU is an empty shelf and a lost sale.</p>
+
+<h2>Top stock-out SKUs</h2>
+<table><tr><th>SKU</th><th>Product</th><th>Category</th><th>Supplier</th><th>Stock-out days</th><th>Stock-out rate</th><th>Est. lost sales</th></tr>
+<tr><td>SKU003</td><td>TV Model 3</td><td>TVs</td><td>SUP05</td><td>79</td><td>8.78%</td><td>$296,601</td></tr>
+<tr><td>SKU011</td><td>Laptop Model 4</td><td>Laptops</td><td>SUP05</td><td>61</td><td>6.78%</td><td>$129,486</td></tr>
+<tr><td>SKU013</td><td>Laptop Model 6</td><td>Laptops</td><td>SUP05</td><td>46</td><td>5.11%</td><td>$138,645</td></tr>
+<tr><td>SKU035</td><td>Accessory Model 4</td><td>Accessories</td><td>SUP08</td><td>39</td><td>4.33%</td><td>$6,386</td></tr>
+<tr><td>SKU027</td><td>Appliance Model 4</td><td>Appliances</td><td>SUP07</td><td>38</td><td>4.22%</td><td>$110,752</td></tr></table>
+<p class="note">The three worst stock-out SKUs are all supplied by GlobalTech Imports (SUP05) — the longest lead times in the chain (13.38 days promised, 15.56 actual). Fast-selling products cannot wait two weeks for a late delivery.</p>
+
+<h2>Key insights</h2>
+<ul>
+<li><strong>The headline in-stock rate hides real money:</strong> 98.59% in stock sounds healthy, but the 508 empty-shelf days concentrate in fast-selling, high-price SKUs and cost an estimated $1,086,953 — about 2.7% of the period's $40.67M revenue.</li>
+<li><strong>Worst stock-out SKU:</strong> SKU003 (TV Model 3) — empty 79 of 900 SKU-store-days (8.78%), an estimated $296,601 of lost sales from one product.</li>
+<li><strong>Busiest store runs out most:</strong> ST05 (Denver) has the highest stock-out rate at 1.86%, because reorder points are set from chain-wide category averages, not from each store's own demand.</li>
+<li><strong>Two suppliers are late half the time:</strong> BudgetParts Wholesale (48.28% on-time) and ValueLine Supply Co (50.00%) — while PrimeSource and QuickShip both deliver on time ~85% of the time.</li>
+<li><strong>$1,593,826 of excess stock</strong> sits above a 60-day supply, mostly in TVs ($618,852) and Laptops ($601,120) — slow cash locked in expensive products while fast ones run out.</li>
+<li><strong>Root cause is a settings problem:</strong> reorder points calculated from category-average demand give fast SKUs too little cover and slow SKUs far too much. Setting them per SKU-store from its own demand history attacks stock-outs and excess at the same time.</li>
+</ul>
+<p class="note">Limitations: lost sales are an estimate — only days the shelf was empty all day are counted, valued at that SKU-store's average daily sales, so the true loss is higher. "Excess" depends on the stated 60-day threshold. Demand and supplier behaviour are simulated with a fixed seed (42) to mirror a real electronics retailer; no real company data is used.</p>
+</main></body></html>

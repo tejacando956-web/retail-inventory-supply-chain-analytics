@@ -1,0 +1,9 @@
+supplier_id,supplier_name,orders_received,avg_lead_promised_days,avg_lead_actual_days,on_time_pct,late_orders,avg_days_late,qty_fill_pct
+SUP08,BudgetParts Wholesale,29,10.34,13.34,48.28,15,5.8,95.79
+SUP03,ValueLine Supply Co,28,8.36,9.86,50.0,14,3.0,99.2
+SUP05,GlobalTech Imports,73,13.38,15.56,63.01,27,5.89,97.6
+SUP07,EverReady Supply,29,9.69,10.28,75.86,7,2.43,100.0
+SUP06,Metro Wholesale Group,61,7.26,7.79,77.05,14,2.29,100.0
+SUP01,NorthPeak Distribution,68,5.97,6.13,80.88,13,1.46,100.0
+SUP04,QuickShip Logistics,39,5.23,5.36,84.62,6,1.17,100.0
+SUP02,PrimeSource Wholesale,33,7.06,7.39,84.85,5,2.2,100.0

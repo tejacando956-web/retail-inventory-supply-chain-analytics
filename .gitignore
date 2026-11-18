@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+.DS_Store
+# NOTE: data/, outputs/ and images/ are committed on purpose —
+# this is a portfolio repo and reviewers should see the results.
